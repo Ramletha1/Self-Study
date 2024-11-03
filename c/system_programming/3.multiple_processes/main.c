@@ -18,7 +18,7 @@ void main() {
         printf("Parent Process: %d\n", pid);
         sleep(1);
         int i;
-        while (waitpid(NULL, NULL, WNOHANG) == 0) {  // Loop until child process exit
+        while (waitpid(pid, NULL, WNOHANG) == 0) {  // Loop until child process exit
             printf("%d ", ++i);
             fflush(stdout);
             sleep(1);
