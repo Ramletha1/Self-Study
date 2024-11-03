@@ -20,7 +20,8 @@ void main() {
         int i;
         while (waitpid(pid, NULL, WNOHANG) == 0) {  // Loop until child process exit
             printf("%d ", ++i);
-            fflush(stdout);
+            fflush(stdout);         // Force print
+            // if (i%2==0) fflush(stdout);      // Print every 2 loop
             sleep(1);
         }
         printf("End of Parent\n");
