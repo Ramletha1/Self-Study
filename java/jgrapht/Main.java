@@ -3,9 +3,9 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // SimpleGraph<String, DefaultEdge> sim_undi_graph = new SimpleGraph<>(DefaultEdge.class);
-        // SimpleDirectedGraph<String, DefaultEdge> sim_di_graph = new SimpleDirectedGraph<>(DefaultEdge.class);
-        // SimpleWeightedGraph<String, DefaultWeightedEdge> sim_undi_wei_graph = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);
+        SimpleGraph<String, DefaultEdge> sim_undi_graph = new SimpleGraph<>(DefaultEdge.class);
+        SimpleDirectedGraph<String, DefaultEdge> sim_di_graph = new SimpleDirectedGraph<>(DefaultEdge.class);
+        SimpleWeightedGraph<String, DefaultWeightedEdge> sim_undi_wei_graph = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);
 
 
         SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> kk = new SimpleDirectedWeightedGraph<>(DefaultWeightedEdge.class);
@@ -26,12 +26,16 @@ public class Main {
         System.out.println("Vertex: " + kk.vertexSet());
         System.out.println("Edge: " + kk.edgeSet());
 
-        for (DefaultWeightedEdge edge : kk.edgeSet()) {
+        DijkstraShortestPath<String, DefaultWeightedEdge> dijkSort = new DijkstraShortestPath<>(kk);
+
+        GraphPath<String, DefaultEdge> gpath = dijkSort.getPath("Hello","Nigga");
+
+        /* for (DefaultWeightedEdge edge : kk.edgeSet()) {
             System.out.println(edge + ": " + kk.getEdgeWeight(edge));
         }
 
         for (String word : kk.vertexSet()) {
             System.out.println(word);
-        }
+        } */
     }
 }
