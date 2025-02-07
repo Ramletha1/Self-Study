@@ -1,0 +1,8 @@
+Compile:
+    ghdl -a NAME.vhd
+
+Build:
+    ghdl -e NAME
+
+Run:
+    ghdl -r NAME

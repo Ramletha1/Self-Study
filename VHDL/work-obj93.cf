@@ -1,0 +1,4 @@
+v 4
+file . "full_subtractor.vhd" "2d5128ad1bd8faf8a8b58a2443b23d9b5df07f3c" "20250207042341.345":
+  entity full_subtractor at 1( 0) + 0 on 11;
+  architecture behavioral of full_subtractor at 13( 360) + 0 on 12;
